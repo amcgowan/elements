@@ -104,6 +104,12 @@
   -o-transition: all @duration @ease;
   transition: all @duration @ease;
 }
+.transitionDelay2(@d1:0.2s, @e1:ease-out, @p1:all, @dl1:0s,
+        @d2:0.2s, @e2:ease-out, @p2:all, @dl2:0s) {
+        -webkit-transition: @d1  @e1  @p1 @dl1, @d2  @e2  @p2  @dl2;
+        -moz-transition: @d1  @e1  @p1 @dl1, @d2 @e2  @p2  @dl2;
+        transition: @d1  @e1  @p1  @dl1, @d2  @e2 @p2  @dl2;
+}
 .inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
   -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
   -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
